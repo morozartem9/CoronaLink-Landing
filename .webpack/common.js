@@ -1,10 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = () => ({
+module.exports = {
   entry: "./src/index.js",
   output: {
-    publicPath: "/",
+    publicPath: "./",
     path: path.join(__dirname, "../dist"),
     filename: "bundle.[contenthash].js",
   },
@@ -51,4 +51,4 @@ module.exports = () => ({
       },
     ],
   },
-});
+};
