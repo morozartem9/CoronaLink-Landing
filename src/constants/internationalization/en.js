@@ -1,0 +1,29 @@
+import { keys } from "./keys";
+import { links } from "../router/links";
+
+const en = {
+  [keys.home]: "Home",
+  [keys.demo]: "Demo",
+  [keys.offers]: "Offers",
+  [keys.contactUs]: "Contact us",
+  [links.home]: "Home",
+  [links.demo]: "Demo",
+  [links.offers]: "Offers",
+  [links.contactUs]: "Contact us",
+  [keys.sentSuccessfully]: "Sent successfully",
+  [keys.send]: "Send",
+  [keys.email]: "Email*",
+  [keys.phone]: "Phone",
+  [keys.organization]: "Organization*",
+  [keys.emailIsRequired]: "Email is required",
+  [keys.invalidEmail]: "Invalid email",
+  [keys.organizationIsRequired]: "Organization is required",
+  [keys.typeYourMessage]: "Type your message...",
+  [keys.wantToAddSomething]: "Want to add something?",
+  [keys.uploadFile]: "Upload file",
+  [keys.errorWhileReadingFile]: "Error while reading file",
+  [keys.maxFileSizeExceeded]: "Maximum file size exceeded",
+  [keys.whatDoWeOffer]: "What do we offer?",
+};
+
+export { en };

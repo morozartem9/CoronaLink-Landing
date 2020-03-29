@@ -1,0 +1,37 @@
+.offers {
+  display: flex;
+  flex-direction: column;
+}
+
+.offersContainer {
+  margin-top: 60px;
+  display: flex;
+}
+
+.offer {
+  max-width: 510px;
+  padding: 30px;
+}
+
+.offer:hover {
+  background-color: var(--main-color);
+}
+
+.offer:hover .cardHeadline {
+  color: var(--accent-color);
+}
+
+.offerDescription {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (max-width: 1024px) {
+  .offersContainer {
+    flex-direction: column;
+  }
+}

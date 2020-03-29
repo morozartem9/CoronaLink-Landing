@@ -1,0 +1,181 @@
+.contactUs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  margin-top: 60px;
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  height: 30px;
+  background-color: #ffffff;
+  font-size: 15px;
+  color: var(--main-color);
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.input::placeholder,
+.messageTextArea::placeholder,
+.filePlaceholder {
+  color: var(--main-color-fifty-alpha);
+}
+
+.input + .input {
+  margin-top: 15px;
+}
+
+.file .error {
+  text-align: left;
+  margin-right: 15px;
+}
+
+.errorContainer {
+  min-height: 30px;
+}
+
+.error {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: var(--accent-color);
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+
+.message {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messageTextArea {
+  height: 180px;
+  background-color: var(--opposite-color);
+  color: var(--main-color);
+  margin-top: 15px;
+  resize: none;
+  padding: 15px;
+}
+
+.file {
+  max-width: 100%;
+  height: 30px;
+  background-color: #ffffff;
+  font-size: 15px;
+  color: #000000;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 15px;
+}
+
+.file input {
+  display: none;
+}
+
+.fileName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 15px;
+  color: var(--main-color);
+}
+
+.uploadFileButton,
+.removeFileButton {
+  justify-self: flex-end;
+  position: absolute;
+  right: 6px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--main-color-fifty-alpha);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.uploadFileButton:before,
+.removeFileButton:before,
+.uploadFileButton:after,
+.removeFileButton:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: var(--opposite-color);
+  right: 8px;
+  top: 4px;
+  transition: all var(--animation-timing-function) var(--animation-duration);
+}
+
+.uploadFileButton:before {
+  transform: rotate(90deg);
+}
+
+.removeFileButton:before {
+  transform: rotate(45deg);
+}
+
+.removeFileButton:after {
+  transform: rotate(-45deg);
+}
+
+.sendButton {
+  margin-top: 30px;
+  transition: font-size var(--animation-duration) var(--animation-duration);
+  position: relative;
+}
+
+.sendButton:after {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  border-right-color: transparent;
+  opacity: 0;
+  left: calc(50% - 9px);
+  top: calc(50% - 9px);
+  transition: 200ms ease-in-out all;
+}
+
+.sendButton.pending {
+  font-size: 0;
+}
+
+.sendButton.pending:after {
+  opacity: 1;
+  animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@media (max-width: 550px) {
+
+  .form {
+    max-width: calc(100% - 10vw)
+  }
+}

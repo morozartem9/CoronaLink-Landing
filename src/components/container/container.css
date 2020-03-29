@@ -1,0 +1,14 @@
+.container {
+  padding: 0 5vw;
+  position: relative;
+  max-width: calc(1300px + 10vw);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+
+  .container {
+    padding: 0 5vw;
+  }
+}
