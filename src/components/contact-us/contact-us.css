@@ -145,7 +145,7 @@
   width: 18px;
   box-sizing: border-box;
   border-radius: 50%;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--opposite-color);
   border-right-color: transparent;
   opacity: 0;
   left: calc(50% - 9px);

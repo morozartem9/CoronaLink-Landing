@@ -10,7 +10,7 @@
   -webkit-tap-highlight-color: transparent;
   font-size: 14px;
   line-height: 1.5;
-  color: #FFFFFF;
+  color: var(--opposite-color);
   font-family: "Montserrat", sans-serif;
 }
 
