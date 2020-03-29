@@ -25,11 +25,14 @@
 
 .image {
   grid-area: image;
-  background-color: #fff;
   min-height: 40vmin;
   min-width: 40vmin;
   max-height: 40vmin;
   max-width: 40vmin;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../../assets/icons/virus.svg");
 }
 
 @media (min-width: 768px) {
