@@ -8,8 +8,8 @@
   user-select: none;
   outline: none;
   -webkit-tap-highlight-color: transparent;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.7;
   color: var(--opposite-color);
   font-family: "Montserrat", sans-serif;
 }
@@ -24,7 +24,7 @@ input,
 textarea {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 body {

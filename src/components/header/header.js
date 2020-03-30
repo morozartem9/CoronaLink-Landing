@@ -1,6 +1,7 @@
 import * as React from "react";
 
-import classes from "./header.css";
+import * as globalClasses from "../../styles/global.css";
+import * as classes from "./header.css";
 import { Container } from "../container/container";
 import { scrollToTop } from "../../utils/scroll-to-top";
 import { condClassName } from "../../utils/conditional-class-name";
@@ -47,7 +48,7 @@ const Language = () => {
 
       {
         expanded && (
-          <ul className={classes.listOfLanguages}>
+          <ul className={compClassName(globalClasses.fadingIn, classes.listOfLanguages)}>
 
             {
               Object.values(languages)
@@ -105,16 +106,19 @@ const Menu = () => {
       <div className={classes.links}>
 
         {
-          Object.values(links).map((link) => (
-            <a
-              key={link}
-              href={`#${link}`}
-              className={classes.link}
-              onClick={onLinkClick}
-            >
-              {translate(link)}
-            </a>
-          ))
+          Object
+            .values(links)
+            .slice(1)
+            .map((link) => (
+              <a
+                key={link}
+                href={`#${link}`}
+                className={classes.link}
+                onClick={onLinkClick}
+              >
+                {translate(link)}
+              </a>
+            ))
         }
 
         <Language />

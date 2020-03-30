@@ -38,7 +38,22 @@ body {
 
 .button {
   height: 35px;
-  font-size: 15px;
   background-color: var(--accent-color);
   text-transform: uppercase;
+}
+
+.fadingIn {
+  animation: fadeIn;
+  animation-duration: var(--animation-duration);
+  animation-timing-function: var(--animation-timing-function);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
