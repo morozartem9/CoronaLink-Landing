@@ -9,6 +9,7 @@ import { useInternationalization } from "../../hooks/use-internationalization";
 import { keys } from "../../constants/internationalization/keys";
 import slideImage from "../../assets/slides/test.png";
 import { useListener } from "../../hooks/use-listener";
+import { condClassName } from "../../utils/conditional-class-name";
 
 const slides = [
   {
@@ -63,6 +64,10 @@ const Slider = () => {
     }
   };
 
+  const onDotClick = (index) => () => {
+    setSlideIndex(index);
+  };
+
   return (
     <div className={classes.sliderContainer}>
       <div ref={ref} className={classes.slider}>
@@ -96,6 +101,20 @@ const Slider = () => {
           />
         )
       }
+
+      <div className={classes.dotsContainer}>
+
+        {
+          slides.map((_, index) => (
+            <div
+              key={index}
+              className={compClassName(classes.dot, condClassName(classes.active, index === slideIndex))}
+              onClick={onDotClick(index)}
+            />
+          ))
+        }
+
+      </div>
 
     </div>
   );

@@ -18,6 +18,32 @@
   left: 0;
 }
 
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: var(--opposite-color);
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-property: opacity;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-timing-function);
+}
+
+.dot.active {
+  opacity: 1;
+  cursor: default;
+}
+
+.dot + .dot {
+  margin-left: 15px;
+}
+
 .slider {
   display: flex;
   overflow: auto;
